@@ -1,0 +1,27 @@
+{
+  "name": "qunit-sinon",
+  "version": "0.0.1",
+  "description": "QUnit + sinon.js demo",
+  "main": "index.html",
+  "keywords": [
+    "qunit",
+    "sinon",
+    "test"
+  ],
+  "authors": [
+    "Tomasz Ducin"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tkoomzaaskz",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "qunit": "~1.15.0",
+    "sinon-qunit": "~2.0.0"
+  }
+}
