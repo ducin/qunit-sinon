@@ -1,6 +1,6 @@
 {
   "name": "qunit-sinon",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "QUnit + sinon.js demo",
   "main": "index.html",
   "keywords": [
@@ -9,7 +9,7 @@
     "test"
   ],
   "authors": [
-    "Tomasz Ducin"
+    "Tomasz Ducin <tomasz.ducin@gmail.com>"
   ],
   "license": "MIT",
   "homepage": "https://github.com/tkoomzaaskz",
@@ -17,12 +17,11 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "*.log"
   ],
   "dependencies": {
-    "qunit": "~1.15.0",
+    "qunit": "1.15.x",
     "sinon": "http://sinonjs.org/releases/sinon-1.10.3.js",
-    "sinon-qunit": "~2.0.0"
+    "sinon-qunit": "2.x.x"
   }
 }

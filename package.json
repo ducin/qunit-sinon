@@ -1,4 +1,15 @@
 {
+  "name": "qunit-sinon",
+  "version": "0.1.0",
+  "description": "QUnit + sinon.js demo",
+  "author": "Tomasz Ducin <tomasz.ducin@gmail.com>",
+  "keywords": [
+    "qunit",
+    "sinon",
+    "test"
+  ],
+  "bugs": "https://github.com/tkoomzaaskz/qunit-sinon/issues",
+  "license": "MIT",
   "engines": {
     "node": ">= 0.10.0"
   },
