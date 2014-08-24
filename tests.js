@@ -1,9 +1,9 @@
 // enable sinon log function
-sinon.log = function(){ console.log.apply(console, arguments) };
+sinon.log = function(){ console.log.apply(console, arguments); };
 
 QUnit.module("Sinon spies");
 
-QUnit.test("test should call anonymous spy", function (assert) {
+QUnit.test("test should call anonymous spy", function () {
     var spyFunction = sinon.spy();
     spyFunction();
     sinon.assert.called(spyFunction, "spy function was called");
