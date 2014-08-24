@@ -19,9 +19,15 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true,
         globals: {
+          // browser
           'console': true,
+          // sinon
           'sinon': true,
-          'QUnit': true
+          // QUnit
+          'test': true,
+          'module': true,
+          'equal': true,
+          'ok': true
         }
       },
       gruntfile: {
