@@ -36,3 +36,21 @@ QUnit.test("test should call method spy", function (assert) {
 });
 
 QUnit.module("Sinon stubs");
+
+QUnit.test("test should call anonymous stub", function (assert) {
+    var stubFunction = sinon.stub();
+    stubFunction.onCall(0).returns("abc");
+    var result = stubFunction();
+    assert.equal("abc", result);
+    sinon.assert.called(stubFunction, "stub function was called");
+});
+
+QUnit.module("Sinon mocks");
+
+QUnit.test("test should call mock", function () {
+    var myObject = { myMethod: function () {} };
+    var mock = sinon.mock(myObject);
+    mock.expects("myMethod").once();
+    myObject.myMethod();
+    mock.verify();
+});
