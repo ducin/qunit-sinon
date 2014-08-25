@@ -21,13 +21,16 @@ module.exports = function(grunt) {
         globals: {
           // browser
           'console': true,
-          // sinon
+          // sinon.js
           'sinon': true,
-          // QUnit
+          // radio.js
+          'radio': true,
+          // QUnit.js
           'test': true,
           'module': true,
           'equal': true,
-          'ok': true
+          'ok': true,
+          'throws': true
         }
       },
       gruntfile: {
