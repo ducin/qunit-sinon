@@ -89,6 +89,18 @@ test("test should call only subscribed channels", function () {
 	ok(!callback.calledTwice, "callback was not called again");
 });
 
+test("test should check specific spy call", function () {
+	var callback = this.spy(function(arg) {
+		return "broadcasting " + arg; }
+	);
+	radio('myChannel').subscribe(callback);
+	radio('myChannel').broadcast('message');
+	ok(callback.called, "callback was called");
+	var call = callback.getCall(0);
+	ok(call.calledWith('message'));
+	equal('broadcasting message', call.returnValue);
+});
+
 module("Sinon stubs");
 
 test("test should call anonymous stub", function () {
