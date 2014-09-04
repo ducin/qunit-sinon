@@ -23,6 +23,9 @@
     "qunit": "1.15.x",
     "sinon": "http://sinonjs.org/releases/sinon-1.10.3.js",
     "sinon-qunit": "2.x.x",
-    "radio": "0.2.x"
+    "radio": "0.2.x",
+    "underscore": "~1.7.0",
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.1"
   }
 }
