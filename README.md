@@ -3,6 +3,8 @@ sinon-qunit demo
 
 This project is a simple demonstration of Christian Johansen's [sinon.js](http://sinonjs.org) library used within John Resig's [QUnit](http://qunitjs.com) runner.
 
+See browser demo [here](http://tkoomzaaskz.github.io/qunit-sinon).
+
 setup
 -----
 

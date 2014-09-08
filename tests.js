@@ -214,11 +214,12 @@ test("test model method returns value", function () {
 	mock.restore();
 });
 
-test("test model method returns value", function () {
+test("test model method returns uses stub values", function () {
 	var sm = new StatusModel();
 	var mock = this.mock(sm);
-	mock.expects("get").withExactArgs("status").once().returns("ACTIVE");
+	mock.expects("get").withExactArgs("status").twice().returns("ACTIVE");
 	mock.expects("get").withExactArgs("items").once().returns([3, 4, 5]);
+	equal(sm.isActive(), true);
 	equal(sm.getSummary(), "Sum of items is: 12");
 	mock.verify();
 	mock.restore();
@@ -227,9 +228,9 @@ test("test model method returns value", function () {
 var StatusView = Backbone.View.extend({
 	// [...]
 	template: _.template("some template..."),
-    initialize: function() {
-        this.listenTo(this.model, "change", this.render);
-    },
+	initialize: function() {
+		this.listenTo(this.model, "change", this.render);
+	},
 	render: function() {
 		this.$el.html(this.template({
 			summary: this.model.getSummary(),
@@ -246,6 +247,7 @@ test("test view uses model method via events", function () {
 		mock = this.mock(sm);
 	mock.expects("get").withExactArgs("status").twice().returns("ACTIVE");
 	mock.expects("get").withExactArgs("items").once();
+	ok(!sv.rendered);
 	sm.set('items', [1, 2, 3]);
 	mock.verify();
 	mock.restore();
