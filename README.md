@@ -3,7 +3,7 @@ sinon-qunit demo
 
 This project is a simple demonstration of Christian Johansen's [sinon.js](http://sinonjs.org) library used within John Resig's [QUnit](http://qunitjs.com) runner.
 
-See browser demo [here](http://tkoomzaaskz.github.io/qunit-sinon).
+See browser demo [here](http://ducin.github.io/qunit-sinon).
 
 setup
 -----
@@ -20,4 +20,4 @@ tests & continuous integration
 
 This project is continuously integrated with travis-ci:
 
-[![Build Status](https://travis-ci.org/tkoomzaaskz/qunit-sinon.png?branch=master)](https://travis-ci.org/tkoomzaaskz/qunit-sinon)
+[![Build Status](https://travis-ci.org/ducin/qunit-sinon.png?branch=master)](https://travis-ci.org/ducin/qunit-sinon)
